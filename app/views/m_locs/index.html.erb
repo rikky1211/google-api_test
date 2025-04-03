@@ -1,0 +1,40 @@
+<h1>m_locs/index</h1>
+
+<div id='map'></div>
+
+<%= render 'shared/page' %>
+
+<style>
+  #map {
+    height: 500px;
+    width: 500px;
+  }
+</style>
+
+<script>
+  let map
+  const display = document.getElementById('display')
+
+  // mapの表示関数 
+function initMap(){
+
+  // 位置情報を取得する
+  navigator.geolocation.getCurrentPosition(function (position) {
+    LatLng = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+
+  // 取得した位置情報を中心に表示
+    map = new google.maps.Map(document.getElementById('map'), {
+      center: LatLng,
+      zoom: 14
+    });
+
+  // マーカーを立てる
+    var marker = new google.maps.Marker({
+      map : map,         
+      position : LatLng   
+    });
+  });
+}
+</script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=<%= ENV["GOOGLE_MAPS_API_KEY"] %>&callback=initMap" async defer></script>

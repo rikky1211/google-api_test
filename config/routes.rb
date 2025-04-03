@@ -14,4 +14,5 @@ Rails.application.routes.draw do
   get "top_pages", to: "top_page#index"
   resources :maps, only: %i[index]
   resources :m_geos, only: %i[index]
+  resources :m_locs, only: %i[index]
 end
