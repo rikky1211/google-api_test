@@ -39,3 +39,27 @@
 ### 手順 ※「01_Google-API_Javascript」が終わった後の手順になります。
 - 1. m_locのroutes.rb/コントローラ/ビューを作成
 - 2. ビューファイルに位置共有のコードを追加
+
+
+## 04_Google-API_Markers (GemのGeocordingを使って複数のマーカーを記憶させる)
+
+### 参考URL
+  [【Rails6 / Google Map API】住所を投稿してマップに複数マーカーを立てる](https://qiita.com/kaiyukun/items/3ab083282872937b1fa5)
+
+  [テーブル内容はこちらを参考に作成](https://qiita.com/lemonade_37/items/51ca0f18fd9da842bb00)
+
+### 手順
+- 1. docker compose exec web rails g model place
+- 2. db/migrateにカラム作成
+- 3. docker compose exec web rails db:migrate
+- 4. Gemfileに「gem 'geocoder'」「gem 'faker'」を記載
+- 5. docker compose exec web bundle install
+- 6. docker compose restart
+- 7. docker compose exec web rails g controller Posts
+- 8. config/route.rbにindexルート記載。
+- 9. controllerにdef indexを記載。
+- 10. rails g geocoder:configを実施。
+- 11. config/initializers/geocoder.rbを編集。
+- 12. db/seeds.rbを編集。
+- 13. docker compose exec web rails db:seed
+- 14. 世界の複数箇所にピン留めされることを確認済み

@@ -40,6 +40,11 @@ gem "bootsnap", require: false
   # 環境変数を管理することができるgemです。(.envファイルで使用)
   gem 'dotenv-rails'
 
+  # 住所や地名から座標（経度緯度）を取得したり、その逆を行ったりするgem
+  gem 'geocoder'
+
+  # 架空の住所を生成するためのツール
+  gem 'faker'
 
 # -------- ここまで --------
 group :development, :test do

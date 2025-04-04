@@ -15,4 +15,5 @@ Rails.application.routes.draw do
   resources :maps, only: %i[index]
   resources :m_geos, only: %i[index]
   resources :m_locs, only: %i[index]
+  resources :posts, only: %i[index]
 end
