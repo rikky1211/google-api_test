@@ -28,3 +28,14 @@
 - 1. m_geoのroutes.rb/コントローラ/ビューを作成
 - 2. ビューファイルに検索機能を追加
 - 3. ビューファイルに検索時のピン留め機能を追加
+
+
+## 03_Google-API_GeoLocation
+
+### 参考URL
+  [【Rails / Google Map API】APIを用いて位置情報を取得する](https://qiita.com/iwasan06/items/075f3dd21a0d3769e0d8)
+
+
+### 手順 ※「01_Google-API_Javascript」が終わった後の手順になります。
+- 1. m_locのroutes.rb/コントローラ/ビューを作成
+- 2. ビューファイルに位置共有のコードを追加
