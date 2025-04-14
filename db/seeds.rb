@@ -1,4 +1,4 @@
-10.times do |n|
+1000.times do |n|
   latitude = Faker::Address.latitude.to_f
   longitude = Faker::Address.longitude.to_f
   Place.create!(
