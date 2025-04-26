@@ -12,7 +12,7 @@
 ### 手順
 - 1. GoogleMapのAPIキーを取得。
 - 2. Rootを「top_pages#index」に設定。
-- 3. mapsのroutes.rb/コントローラ/ビューを作成
+- 3. mapsのroutes.rb/コントローラ/ビューを作成(内容は参考URLから確認。)
 - 4. Gem dotenv-railsをインストール (その後再起動)
 - 5. touch .envでファイルを作成。
 - 6. 手順5で作ったファイルに「GOOGLE_MAPS_API_KEY = "APIキー"」をファイルに記載。
